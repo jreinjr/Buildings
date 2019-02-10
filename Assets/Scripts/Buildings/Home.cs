@@ -6,7 +6,7 @@ public class Home : Building
 {
     protected override int CalculateIncome()
     {
-        Collider[] nearby = Physics.OverlapSphere(transform.position, 5f);
+        Collider[] nearby = Physics.OverlapSphere(transform.position, 6f);
         return nearby.Length;
     }
 }

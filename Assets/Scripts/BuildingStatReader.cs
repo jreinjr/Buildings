@@ -8,7 +8,7 @@ public class BuildingStatReader : MonoBehaviour
 {
     private Building m_Building;
     [SerializeField] [ReadOnly] private int Income;
-
+    [SerializeField] [ReadOnly] private int ID;
 
     private void OnValidate()
     {
@@ -17,6 +17,7 @@ public class BuildingStatReader : MonoBehaviour
         if (m_Building != null)
         {
             Income = m_Building.Income;
+            ID = m_Building.ID;
         }
     }
 }

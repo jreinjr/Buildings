@@ -6,7 +6,7 @@ using UnityEngine.Events;
 [System.Serializable]
 public struct Hotkey
 {
-    public char key;
+    public KeyCode key;
     public UnityEvent action;
 }
 
@@ -28,7 +28,13 @@ public class InputManager : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-
+            for (int i = 0; i < keys.Length; i++)
+            {
+                if (Input.GetKeyDown(keys[i].key))
+                {
+                    keys[i].action.Invoke();
+                }
+            }
         }
     }
 }
