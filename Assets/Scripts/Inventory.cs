@@ -6,7 +6,15 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public Text inventoryText;
-    public Resource resource;
+    public Resource[] resources;
+
+    private void Start()
+    {
+        for (int i = 0; i < resources.Length; i++)
+        {
+            resources[i].Reset();
+        }
+    }
 
     public void UpdateInventoryText()
     {
@@ -15,6 +23,8 @@ public class Inventory : MonoBehaviour
             throw new MissingReferenceException();
         }
 
-        inventoryText.text = resource.Current.ToString();
+        inventoryText.text = resources[0].Current.ToString();
     }
+
+
 }

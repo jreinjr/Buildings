@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Building))]
-[ExecuteInEditMode]
 public class BuildingStatReader : MonoBehaviour
 {
     private Building m_Building;

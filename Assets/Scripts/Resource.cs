@@ -23,6 +23,11 @@ public class Resource : ScriptableObject
         ChangeResource(startingResource);
     }
 
+    public void Reset()
+    {
+        ChangeResource(-_current);
+    }
+
     /// <summary>
     /// Adds the Resource.
     /// </summary>
@@ -46,6 +51,8 @@ public class Resource : ScriptableObject
         ChangeResource(-cost);
         return true;
     }
+
+    
 
     /// <summary>
     /// Determines if the specified cost is affordable.
