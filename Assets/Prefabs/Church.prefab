@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1170751198596189086
+--- !u!1001 &3597461218249667643
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,12 +10,7 @@ PrefabInstance:
     - target: {fileID: 7930905523982655397, guid: 0526d125eaba6db469d49dc6d6aff339,
         type: 3}
       propertyPath: m_Name
-      value: Home
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930905523982655397, guid: 0526d125eaba6db469d49dc6d6aff339,
-        type: 3}
-      propertyPath: m_TagString
-      value: Home
+      value: Church
       objectReference: {fileID: 0}
     - target: {fileID: 7435632602858769241, guid: 0526d125eaba6db469d49dc6d6aff339,
         type: 3}
@@ -74,20 +69,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8836495872098043305, guid: 0526d125eaba6db469d49dc6d6aff339,
         type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: ID
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 12250128980663421, guid: 0526d125eaba6db469d49dc6d6aff339,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 4551bf52324c13845885a5362b952a0a, type: 2}
+      objectReference: {fileID: 2100000, guid: 0b43a41a8454ee2418cc4580e1921b65, type: 2}
     - target: {fileID: 210574535629975358, guid: 0526d125eaba6db469d49dc6d6aff339,
         type: 3}
       propertyPath: buildingType
       value: 
-      objectReference: {fileID: 11400000, guid: 4e61028f28fb8f84db2ea672b911ce3b,
+      objectReference: {fileID: 11400000, guid: 8326ce77df82b1345a736c430582d541,
         type: 2}
-    m_RemovedComponents:
-    - {fileID: 4061777585560490969, guid: 0526d125eaba6db469d49dc6d6aff339, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0526d125eaba6db469d49dc6d6aff339, type: 3}

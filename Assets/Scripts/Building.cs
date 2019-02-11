@@ -2,31 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Building : MonoBehaviour
+public class Building : MonoBehaviour
 {
-    public int ID;
+    public int ID { get { return _id; } }
+    private readonly int _id;
+    protected static int _ID;
 
-    static int _id
-    {
-        get
-        {
-            return 1;// ID;
-        }
-    }
-
+    public BuildingType buildingType;
 
     public Building()
     {
-       // ID = ++_id; 
+       _id = ++_ID; 
     }
 
     public int Income
     {
         get
         {
-            return CalculateIncome();
+            return CollectIncome();
         }
     }
 
-    protected abstract int CalculateIncome();
+    public int CollectIncome()
+    {
+        return buildingType.CalculateIncome(this);
+    }
 }

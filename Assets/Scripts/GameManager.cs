@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Inventory))]
 public class GameManager : MonoBehaviour
 {
     // Singleton instance
     public static GameManager instance = null;
+    private Inventory inventory;
 
     public int Gold
     {
@@ -25,6 +27,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        inventory = GetComponent<Inventory>();
+
         GameClock.OnTick += delegate (object sender, GameClock.OnTickEventArgs e)
         {
             OnTick();
@@ -45,11 +49,7 @@ public class GameManager : MonoBehaviour
 
     void OnTick()
     {
-
+        inventory.UpdateInventoryText();
     }
 
-    void CollectIncome()
-    {
-
-    }
 }

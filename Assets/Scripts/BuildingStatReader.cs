@@ -12,6 +12,16 @@ public class BuildingStatReader : MonoBehaviour
 
     private void OnValidate()
     {
+        UpdateStats();
+    }
+
+    private void OnEnable()
+    {
+        UpdateStats();
+    }
+
+    void UpdateStats()
+    {
         m_Building = GetComponent<Building>();
 
         if (m_Building != null)
