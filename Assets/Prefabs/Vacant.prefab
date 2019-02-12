@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7435632602858769241}
   - component: {fileID: 210574535629975358}
+  - component: {fileID: 3103117301988464451}
   - component: {fileID: 8836495872098043305}
   - component: {fileID: 8663268586074845860}
   m_Layer: 0
@@ -123,8 +124,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 528f77a4d833fd44f87b3223bb24bc3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
-  buildingType: {fileID: 11400000, guid: cb2e871a3bd17f24f922bd051f13af71, type: 2}
+  m_buildingStats: {fileID: 11400000, guid: a706bb8fcd0b59342b03c95d1c67b5a9, type: 2}
+--- !u!114 &3103117301988464451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7930905523982655397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9680ada4a72966347b92d4ab893db2c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  incomeStreams: []
 --- !u!114 &8836495872098043305
 MonoBehaviour:
   m_ObjectHideFlags: 0

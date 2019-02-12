@@ -7,28 +7,22 @@ public class GameManager : MonoBehaviour
 {
     // Singleton instance
     public static GameManager instance = null;
-    private Inventory inventory;
 
-    public int Gold
-    {
-        get
-        {
-            return _gold;
-        }
-    }
-    [ReadOnly] [SerializeField] private int _gold;
+    public static Inventory Inventory;
+
+    
     
     private void Awake()
     {
         // Singleton behavior
         if (instance == null) instance = this;
         else if (instance != this) DestroyImmediate(gameObject);
+
+        Inventory = GetComponent<Inventory>();
     }
 
     private void Start()
     {
-        inventory = GetComponent<Inventory>();
-
         GameClock.OnTick += delegate (object sender, GameClock.OnTickEventArgs e)
         {
             OnTick();
@@ -49,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     void OnTick()
     {
-        inventory.UpdateInventoryText();
+       // inventory.UpdateInventoryText();
     }
 
 }

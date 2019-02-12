@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Home
+  - Church
+  - Farm
+  - Field
+  - Vacant
+  - Graveyard
   layers:
   - Default
   - TransparentFX

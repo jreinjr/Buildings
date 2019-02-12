@@ -6,6 +6,7 @@ using UnityEngine;
 public class BuildingStatReader : MonoBehaviour
 {
     private Building m_Building;
+    private Income m_Income;
     [SerializeField] [ReadOnly] private int Income;
     [SerializeField] [ReadOnly] private int ID;
 
@@ -22,10 +23,11 @@ public class BuildingStatReader : MonoBehaviour
     void UpdateStats()
     {
         m_Building = GetComponent<Building>();
+        m_Income = GetComponent<Income>();
 
         if (m_Building != null)
         {
-            Income = m_Building.Income;
+            //Income = m_Income.Income;
             ID = m_Building.ID;
         }
     }

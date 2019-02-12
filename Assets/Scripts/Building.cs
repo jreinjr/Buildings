@@ -4,27 +4,18 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    public int ID { get { return _id; } }
-    private readonly int _id;
-    protected static int _ID;
+    public static int nextID = 0;
+    public int ID { get { return _ID; } }
+    private int _ID;
 
-    public BuildingType buildingType;
+    [Expandable]
+    public BuildingStats m_buildingStats;
 
-    public Building()
+    private void Awake()
     {
-       _id = ++_ID; 
+        _ID = nextID;
+        nextID++;
     }
 
-    public int Income
-    {
-        get
-        {
-            return CollectIncome();
-        }
-    }
-
-    public int CollectIncome()
-    {
-        return buildingType.CalculateIncome(this);
-    }
+    
 }
