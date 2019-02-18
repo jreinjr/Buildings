@@ -10,6 +10,9 @@ TagManager:
   - Field
   - Vacant
   - Graveyard
+  - Pop
+  - StonePile
+  - Forest
   layers:
   - Default
   - TransparentFX
@@ -20,8 +23,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Buildings
+  - Ground
   - 
   - 
   - 
