@@ -8,7 +8,9 @@ public enum ResourceType
 {
     Gold,
     Food,
-    Culture
+    Culture,
+    Wood,
+    Stone
 }
 
 public class Inventory : MonoBehaviour

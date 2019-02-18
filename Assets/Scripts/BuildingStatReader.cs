@@ -5,10 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Building))]
 public class BuildingStatReader : MonoBehaviour
 {
-    private Building m_Building;
+    private UniqueID m_ID;
     private Income m_Income;
     [SerializeField] [ReadOnly] private int Income;
-    [SerializeField] [ReadOnly] private int ID;
+    [SerializeField] [ReadOnly] private string ID;
 
     private void OnValidate()
     {
@@ -22,13 +22,13 @@ public class BuildingStatReader : MonoBehaviour
 
     void UpdateStats()
     {
-        m_Building = GetComponent<Building>();
+        m_ID = GetComponent<UniqueID>();
         m_Income = GetComponent<Income>();
 
-        if (m_Building != null)
+        if (m_ID != null)
         {
             //Income = m_Income.Income;
-            ID = m_Building.ID;
+            ID = m_ID.ID;
         }
     }
 }

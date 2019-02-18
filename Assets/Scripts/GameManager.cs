@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
 
     public static Inventory Inventory;
-
     
+    public List<Pop> AllPops { get; protected set; }
+    public List<Building> AllBuildings { get; protected set; }
     
     private void Awake()
     {
@@ -23,21 +24,20 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        GameClock.OnTick += delegate (object sender, GameClock.OnTickEventArgs e)
-        {
-            OnTick();
-        };
+        GameClock.OnTick += delegate (object sender, GameClock.OnTickEventArgs e){  OnTick();   };
     }
 
     public void SpawnBuilding(Building buildingType)
     {
-        RaycastHit hitInfo;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hitInfo))
+        int mask = LayerMask.NameToLayer("Buildings");
+        //if (Physics.Raycast(ray, out RaycastHit hitInfo, 100f, mask, QueryTriggerInteraction.UseGlobal))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, 100f, mask))
         {
+            Debug.Log(hitInfo.collider.name);
             Transform newBuilding = Instantiate(buildingType.transform);
             newBuilding.position = hitInfo.point;
+            //newBuilding.Place();
         }
     }
 
