@@ -5,10 +5,10 @@ using UnityEngine;
 [System.Serializable]
 public struct ResourceCost
 {
-    public ResourceType type;
+    public Resource type;
     public int cost;
 
-    public ResourceCost(ResourceType type, int cost) : this()
+    public ResourceCost(Resource type, int cost) : this()
     {
         this.cost = cost;
         this.type = type;
@@ -27,7 +27,7 @@ public class BuildingStats : ScriptableObject
     {
         if (resourceCost == null)
         {
-            resourceCost = new ResourceCost[]{ new ResourceCost(ResourceType.Gold, 100) };
+            resourceCost = new ResourceCost[]{ new ResourceCost(Resource.Gold, 100) };
         }
     }
 }

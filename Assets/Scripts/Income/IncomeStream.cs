@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 public abstract class IncomeStream : ScriptableObject
 {
-    public ResourceType resource;
+    public Resource resource;
     public int baseIncome;
 
     public virtual void GenerateIncome(Building building)

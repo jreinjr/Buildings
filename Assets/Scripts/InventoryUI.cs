@@ -21,10 +21,10 @@ public class InventoryUI : MonoBehaviour
 
     void InventoryChanged(Inventory inventory)
     {
-        gold_text.text = "Gold: " + inventory.GetResourceAmount(ResourceType.Gold);
-        food_text.text = "Food: " + inventory.GetResourceAmount(ResourceType.Food);
-        culture_text.text = "Culture: " + inventory.GetResourceAmount(ResourceType.Culture);
-        wood_text.text = "Wood: " + inventory.GetResourceAmount(ResourceType.Wood);
-        stone_text.text = "Stone: " + inventory.GetResourceAmount(ResourceType.Stone);
+        gold_text.text = "Gold: " + inventory.GetResourceAmount(Resource.Gold);
+        food_text.text = "Food: " + inventory.GetResourceAmount(Resource.Food);
+        culture_text.text = "Culture: " + inventory.GetResourceAmount(Resource.Culture);
+        wood_text.text = "Wood: " + inventory.GetResourceAmount(Resource.Wood);
+        stone_text.text = "Stone: " + inventory.GetResourceAmount(Resource.Stone);
     }
 }

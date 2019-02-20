@@ -32,7 +32,6 @@ public class Populate : MonoBehaviour
     {
         if (m_building.HasVacancy() == false)
         {
-            Debug.Log("Unable to spawn pop - max pop exceeded");
             return;
         }
 
