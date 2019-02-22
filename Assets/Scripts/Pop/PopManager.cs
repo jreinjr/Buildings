@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PopManager : Singleton<PopManager>
+public class PopManager : MonoBehaviour
 {
    
 }
